@@ -22,10 +22,13 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    backgroundColor:'plum',
+    // flex:1,
+    flexWrap:'wrap',
+    columnGap:10,
+    height:300,
     marginTop:40,
     borderWidth:6,
+    padding:12,
     borderColor:'red'
   },
 });
