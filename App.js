@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet,View,Text, Dimensions} from 'react-native';
+import { StyleSheet,View,Text, SafeAreaView} from 'react-native';
 
 
 export default function App() {
-  
-
+ 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.safeCont}>
+
+      <View style={styles.container}>
       <View style={styles.box}>
         <Text style={styles.text}>
           Welcome!
@@ -15,30 +16,30 @@ export default function App() {
       </View>
      
     </View>
+    </SafeAreaView>
   );
 }
 
-const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
 
 
 const styles = StyleSheet.create({
+   safeCont:{
+    flex:1,
+    backgroundColor:'white'
+   },
   container: {
     flex:1,
     backgroundColor:'plum',
-    alignItems: 'center',
-    justifyConten:'center',
-        paddingTop:40,
-
+    paddingTop:5
   },
    box:{
-    width: windowWidth > 500 ? "70%": "90%",
-    height:windowHeight > 600? "30%": "90%",
-    backgroundColor:'wheat',
-    alignItems: 'center',
-    justifyContent:'center'
+    padding:20,
    },
    text:{
-    fontSize:windowWidth > 500 ? 40 : 24,
-   }
+    fontSize:24,
+    fontWeight:'bold',
+    textAlign:'center'
+   },
+  
+  
 });
