@@ -1,21 +1,13 @@
 import React from 'react';
-import { StyleSheet,View,Text, SafeAreaView} from 'react-native';
+import { StyleSheet,SafeAreaView, Platform} from 'react-native';
+import CarCard from './components/carCard';
 
 
 export default function App() {
  
   return (
-    <SafeAreaView style={styles.safeCont}>
-
-      <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>
-          Welcome!
-        </Text>
-
-      </View>
-     
-    </View>
+      <SafeAreaView style={styles.container}>
+        <CarCard/>
     </SafeAreaView>
   );
 }
@@ -23,23 +15,10 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
-   safeCont:{
-    flex:1,
-    backgroundColor:'white'
-   },
+  
   container: {
     flex:1,
-    backgroundColor:'plum',
-    paddingTop:5
-  },
-   box:{
-    padding:20,
-   },
-   text:{
-    fontSize:24,
-    fontWeight:'bold',
-    textAlign:'center'
-   },
-  
-  
+    backgroundColor:'f5f5',
+    paddingTop: Platform.OS === "android" ? 50:0,
+  }
 });
