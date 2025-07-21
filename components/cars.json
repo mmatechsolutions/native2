@@ -1,0 +1,104 @@
+{
+  "cars": [
+    {
+      "name": "Porsche 911",
+      "top_speed": "330 km/h",
+      "color": "Guards Red"
+    },
+    {
+      "name": "BMW M5",
+      "top_speed": "305 km/h",
+      "color": "Marina Bay Blue"
+    },
+    {
+      "name": "Mercedes-AMG GT",
+      "top_speed": "318 km/h",
+      "color": "Designo Selenite Grey"
+    },
+    {
+      "name": "Lamborghini Huracán",
+      "top_speed": "325 km/h",
+      "color": "Verde Mantis"
+    },
+    {
+      "name": "Chevrolet Corvette C8",
+      "top_speed": "312 km/h",
+      "color": "Torch Red"
+    },
+    {
+      "name": "Audi RS7",
+      "top_speed": "305 km/h",
+      "color": "Nardo Gray"
+    },
+    {
+      "name": "Nissan GT-R",
+      "top_speed": "315 km/h",
+      "color": "Jet Black Pearl"
+    },
+    {
+      "name": "McLaren 720S",
+      "top_speed": "341 km/h",
+      "color": "Papaya Orange"
+    },
+    {
+      "name": "Ferrari F8 Tributo",
+      "top_speed": "340 km/h",
+      "color": "Rosso Corsa"
+    },
+    {
+      "name": "Aston Martin DB11",
+      "top_speed": "322 km/h",
+      "color": "Magnetic Silver"
+    },
+    {
+      "name": "Bugatti Chiron",
+      "top_speed": "420 km/h",
+      "color": "French Racing Blue"
+    },
+    {
+      "name": "Tesla Model S Plaid",
+      "top_speed": "322 km/h",
+      "color": "Midnight Silver"
+    },
+    {
+      "name": "Koenigsegg Jesko",
+      "top_speed": "482 km/h",
+      "color": "Pearl White"
+    },
+    {
+      "name": "Pagani Huayra",
+      "top_speed": "383 km/h",
+      "color": "Carbon Black"
+    },
+    {
+      "name": "Ford GT",
+      "top_speed": "347 km/h",
+      "color": "Liquid Blue"
+    },
+    {
+      "name": "Dodge Challenger SRT Hellcat",
+      "top_speed": "327 km/h",
+      "color": "Go Mango"
+    },
+    {
+      "name": "Jaguar F-Type R",
+      "top_speed": "300 km/h",
+      "color": "British Racing Green"
+    },
+    {
+      "name": "Alfa Romeo Giulia Quadrifoglio",
+      "top_speed": "307 km/h",
+      "color": "Alfa Red"
+    },
+    {
+      "name": "Lexus LC 500",
+      "top_speed": "270 km/h",
+      "color": "Infrared"
+    },
+    {
+      "name": "Mazda RX-7",
+      "top_speed": "250 km/h",
+      "color": "Sunburst Yellow"
+    }
+  ]
+}
