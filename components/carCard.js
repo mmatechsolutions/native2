@@ -1,70 +1,56 @@
- import { View,Text, StyleSheet,Platform, FlatList} from "react-native";
+ import { View,Text, StyleSheet,SectionList, } from "react-native";
  import carData from "./cars.json"
 
  export default function CarCard(){
      return(
-        <FlatList 
-        data={carData.cars}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({item})=>{
+       
+        <SectionList
+          sections={carData}
+          renderItem={({item})=>{
             return(
-                <View style={styles.nameContainer}>
-                    <Text style={styles.name}>{item.name}</Text>
-                    <Text style={styles.speed}>{item.top_speed}</Text>
-                    <Text style={styles.color}>{item.color}</Text>
-                </View>
+
+            <View style={styles.card}>
+                   <Text style={styles.cardText}>{item}</Text>                   
+             </View>
             )
-        }}
-        ItemSeparatorComponent={<View style={{height:20}}/>}
-        ListEmptyComponent={<Text>No Cars Found</Text>}
-        ListHeaderComponent={<Text style={styles.header}>Cars</Text>}
-        ListFooterComponent={<Text style={styles.header}>End of Cars</Text>}
+          }}
+
+          renderSectionHeader={({section})=>{
+            return(
+              <Text style={styles.sectionHeaderText}>{section.fuel} Cars</Text>
+            )
+          }}
+
+          ItemSeparatorComponent={()=> <View style={{height:16}}/>}
+          SectionSeparatorComponent={()=> <View style={{height:16}}/>}
         />
+       
      )
  }
 
  const styles = StyleSheet.create({
-    nameContainer: {
-        backgroundColor: '#fff',
-        padding: 16,
-        borderRadius: 12,
-        marginHorizontal: 16,
-        // marginBottom: 12,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        ...Platform.select({
-            ios: {
-            shadowColor: '#000',
-            shadowOffset: { width: 2, height: 2 },
-            shadowOpacity: 0.1,
-            shadowRadius: 4,
-            },
-            android: {
-            elevation: 3,
-            }
-        })
-        },
-    name: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#333',
-        marginBottom: 6
-        },
-    speed: {
-        fontSize: 16,
-        color: '#0077cc',
-        marginBottom: 4
-        },
-    color: {
-        fontSize: 16,
-        color: '#555'
-        },
-
-        header:{
-            fontSize:24,
-            fontWeight:'bold',
-            textAlign:'center',
-            margin:12
-        }
-
+   sectionHeaderText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    backgroundColor: '#f0f0f0',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginTop: 10,
+  },
+  card: {
+    backgroundColor: '#ffffff',
+    padding: 10,
+    marginVertical: 4,
+    marginHorizontal: 12,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2
+  },
+  cardText: {
+    fontSize: 16,
+    color: '#333'
+  }
  })

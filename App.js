@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet,SafeAreaView, Platform, ScrollView} from 'react-native';
-import CarCard from './components/carCard';
+import Input from './components/input';
 
 
 export default function App() {
 
   return (
       <SafeAreaView style={styles.container}>
-        <CarCard/>
+        <Input/>
     </SafeAreaView>
   );
 }
